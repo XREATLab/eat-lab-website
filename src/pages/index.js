@@ -11,6 +11,7 @@ import img03 from '../images/03.gif'
 import img04 from '../images/04.gif'
 import img05 from '../images/05.gif'
 import img06 from '../images/06.gif'
+import bigIcon from '../images/big-icon.png'
 
 
 const IndexPage = () => {
@@ -33,12 +34,12 @@ const IndexPage = () => {
   }, [])
 
     const projects = [
-    { id: 1, title: 'XR Museum Experience', category: 'Virtual Reality', year: '2024', image: img01 },
-    { id: 2, title: '食飽未 Dinegital', category: 'Interactive Dining', year: '2024', image: img02 },
-    { id: 3, title: 'Generative Landscapes', category: 'AI Art', year: '2023', image: img03 },
-    { id: 4, title: 'Unity Playground', category: 'Game Development', year: '2023', image: img04 },
-    { id: 5, title: 'Blockchain Gallery', category: 'Web3', year: '2023', image: img05 },
-    { id: 6, title: 'Motion Theater', category: 'Interactive Media', year: '2023', image: img06 }
+    { id: 1, title: 'XR Experience in DaVinci Kitchen', category: 'Virtual Reality', year: '2024', image: img01 },
+    { id: 2, title: 'Interactive Dining Experience', category: 'Mixed Reality + Dining', year: '2024', image: img02 },
+    { id: 3, title: 'Immersive experience even in BGM', category: 'AI + Music + VR', year: '2024', image: img03 },
+    { id: 4, title: 'Custom character to serve your food', category: 'Game + Custom Service', year: '2024', image: img04 },
+    { id: 5, title: 'Even play with your restaurant roof', category: 'Spatial anchor + Multiplayer', year: '2024', image: img05 },
+    { id: 6, title: 'Future of anime cafe', category: 'Vtuber + AI', year: '2024', image: img06 }
   ]
 
   return (
@@ -55,10 +56,10 @@ const IndexPage = () => {
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-yellow-400/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         </div>
 
-        <div className="container mx-auto px-6 py-24 relative z-10">
+        <div className="px-6 py-24 relative z-10">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
             {/* Hero Text */}
-            <div className="max-w-4xl" ref={heroRef} style={{ transition: 'transform 0.1s ease-out' }}>
+            <div className="max-w-4xl ml-24" ref={heroRef} style={{ transition: 'transform 0.1s ease-out' }}>
               <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-8 leading-none">
                 <span className="block bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
                   E.A.T
@@ -96,11 +97,11 @@ const IndexPage = () => {
             </div>
 
             {/* Hero Image */}
-            <div className="hidden lg:block w-100 h-100 shrink-0 animate-bounce-slow">
+            <div className="hidden lg:block w-1/2 h-auto shrink-0 animate-bounce-slow">
               <img
-                src="./big_icon.png"
+                src={bigIcon}
                 alt="Big Icon"
-                className="w-full h-full object-contain"
+                className="w-full h-auto object-contain"
               />
             </div>
           </div>
@@ -126,7 +127,7 @@ const IndexPage = () => {
                 className="group relative overflow-hidden bg-gray-900 aspect-[4/3] cursor-pointer"
                 onClick={() => setModalImage(project.image)}
               >
-                <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: `url(${project.image})`, filter: 'grayscale(100%)' }}></div>
+                <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: `url(${project.image})` }}></div>
                 <div className="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black via-black/50 to-transparent">
                   <p className="text-sm text-gray-400 mb-2 transform translate-y-2 group-hover:translate-y-0 transition-transform">
                     {project.category} • {project.year}
@@ -159,41 +160,26 @@ const IndexPage = () => {
       <section className="py-20 bg-gradient-to-b from-black to-gray-950">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">Our Philosophy</h2>
-          
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="group bg-gray-900 p-8 border border-gray-800 hover:border-yellow-400 transition-all duration-300 transform hover:-translate-y-2">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-yellow-400/10 rounded-full mb-6 group-hover:bg-yellow-400/20 transition-colors">
-                <svg className="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-6 text-4xl">🔬</div>
               <h3 className="text-2xl font-bold mb-4 text-yellow-400">Experiment</h3>
               <p className="text-gray-400 leading-relaxed">
-                Pushing boundaries through innovative research in XR, AI, and emerging technologies. We believe in taking risks to discover new possibilities.
+                We test bold ideas with XR and AI to discover new ways to experience everyday life.
               </p>
             </div>
-            
             <div className="group bg-gray-900 p-8 border border-gray-800 hover:border-yellow-400 transition-all duration-300 transform hover:-translate-y-2">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-yellow-400/10 rounded-full mb-6 group-hover:bg-yellow-400/20 transition-colors">
-                <svg className="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-              </div>
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-6 text-4xl">🎨</div>
               <h3 className="text-2xl font-bold mb-4 text-yellow-400">Art</h3>
               <p className="text-gray-400 leading-relaxed">
-                Creating beautiful experiences that inspire and transform digital interactions into art. Every project is a canvas for creative expression.
+                We turn digital culture into immersive stories that move and inspire people.
               </p>
             </div>
-            
             <div className="group bg-gray-900 p-8 border border-gray-800 hover:border-yellow-400 transition-all duration-300 transform hover:-translate-y-2">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-yellow-400/10 rounded-full mb-6 group-hover:bg-yellow-400/20 transition-colors">
-                <svg className="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                </svg>
-              </div>
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-6 text-4xl">💻</div>
               <h3 className="text-2xl font-bold mb-4 text-yellow-400">Technology</h3>
               <p className="text-gray-400 leading-relaxed">
-                Leveraging cutting-edge tools including Unity, WebGL, and custom frameworks. Technology is our medium for bringing visions to life.
+                Using tools like Unity and Meta XR, we bring these ideas to life in vivid, interactive spaces.
               </p>
             </div>
           </div>

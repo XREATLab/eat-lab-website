@@ -12,7 +12,7 @@ const Header = () => {
 
   return (
     <header className="bg-yellow-400 text-black shadow-md z-50 relative font-mono pb-4">
-    <div className="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex flex-row justify-between items-center">
         <h1 className="text-3xl md:text-2xl font-extrabold tracking-tight pixel-text flex items-end gap-0 transition-all duration-700 ease-in-out">
           <div className="flex items-end gap-2">
             {letters.map(({ key, short, full }, idx) => (
