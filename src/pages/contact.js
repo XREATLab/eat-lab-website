@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Layout from '../components/Layout.js'
-import Seo from '../components/Seo.js'
+import Layout from '../components/Layout'
+import Seo from '../components/Seo'
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({

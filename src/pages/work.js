@@ -1,6 +1,6 @@
 import React from 'react'
-import Layout from '../components/Layout.js'
-import Seo from '../components/Seo.js'
+import Layout from '../components/Layout'
+import Seo from '../components/Seo'
 
 const images = [
   { src: '../images/01.gif', alt: 'Project 1', label: 'Project 01' },

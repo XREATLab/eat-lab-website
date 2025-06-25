@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { useState } from 'react'
-import Layout from '../components/Layout.js'
-import Seo from '../components/Seo.js'
+import Layout from '../components/Layout'
+import Seo from '../components/Seo'
 import PixelBanner from '../components/PixelBanner'
 import { Link } from 'gatsby'
 
