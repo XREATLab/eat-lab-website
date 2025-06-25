@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import { useState } from 'react'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
-import PixelBanner from '../components/PixelBanner'
+import PixelBanner from '../components/pixelbanner'
 import { Link } from 'gatsby'
 
 import img01 from '../images/01.gif'
