@@ -35,7 +35,7 @@ const WorkPage = () => {
 
   const content = {
     EN: {
-      title: "Feature Work.",
+      title: "Feature Work",
       projects: projects
     },
     ZH: {
@@ -57,9 +57,9 @@ const WorkPage = () => {
         },
         {
           year: '2026',
-          title: '🍽️Dinegital 2.0 (2026 年推出)',
+          title: '🍽️ Dinegital 2.0 (2026 年推出)',
           subtitle: '"讓用餐變成一場冒險！"',
-          desc: "明年，我們將更進一步。這個新的、更長的版本將包含原創故事、AI 驅動的角色和多人互動。您將自由行走，通過提供數位菜餚觸發事件，並與虛擬服務員聊天——將每頓飯變成沉浸式故事。",
+          desc: "明年，我們將更進一步。這個新的、更長的版本將包含原創故事、AI 驅動的角色和多人互動。您將自由行走，通過提供數位菜餚觸發事件，並與虛擬的服務員聊天——將每頓飯變成沉浸式故事。",
           image: img03
         }
       ]
