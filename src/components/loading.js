@@ -190,7 +190,7 @@ const Loading = ({ title = 'E.A.T. Lab', subtitle = 'Loading...', fadeOut = fals
       ctx.textAlign = 'center'
       ctx.shadowColor = '#000'
       ctx.shadowBlur = 8
-      ctx.fillText(title, width/2, 40)
+      ctx.fillText(title, width/2, 100)
       ctx.shadowBlur = 0
       ctx.font = '20px monospace'
       ctx.fillStyle = '#ff0'
