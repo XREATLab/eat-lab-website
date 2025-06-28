@@ -1,11 +1,11 @@
 {
-  "name": "nmanodept",
+  "name": "xreatlab",
   "version": "1.0.0",
   "private": true,
-  "description": "nmanodept",
-  "author": "nmanodept",
+  "description": "xreatlab",
+  "author": "ducklexander",
   "keywords": [
-    "gatsby"
+    "xreatlab,vr,art,technology,experiment,eatlab,studio"
   ],
   "scripts": {
     "develop": "gatsby develop",

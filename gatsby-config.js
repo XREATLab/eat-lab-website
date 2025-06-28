@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `E.A.T Lab`,
+    title: `E.A.T. Lab`,
     description: `Experiment, Art, Tech Lab`,
-    author: `@eatlab`,
-    siteUrl: `https://eatlab.com`
+    author: `@xreatlab`,
+    siteUrl: `https://xreatlab.pages.dev`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -20,8 +20,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `E.A.T Lab`,
-        short_name: `EATLab`,
+        name: `E.A.T. Lab`,
+        short_name: `E.A.T.Lab`,
         start_url: `/`,
         background_color: `#000000`,
         theme_color: `#000000`,

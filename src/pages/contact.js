@@ -1,25 +1,29 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
+import { useLanguage } from '../contexts/language-context'
 
 const ContactPage = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  })
+  const { currentLang } = useLanguage()
   
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log('Form submitted:', formData)
+  const content = {
+    EN: {
+      title: "Get in Touch",
+      subtitle: "Have something to feed us? We devour ideas for breakfast.",
+      email: "Email",
+      location: "Location",
+      followUs: "Follow Us"
+    },
+    ZH: {
+      title: "聯絡我們",
+      subtitle: "有什麼點子想餵我們嗎？我們每天早餐吃的就是靈感。",
+      email: "電子郵件",
+      location: "位置",
+      followUs: "關注我們"
+    }
   }
-  
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
+
+  const t = content[currentLang]
   
   return (
     <Layout>
@@ -27,27 +31,27 @@ const ContactPage = () => {
       
       <section className="pt-32 pb-20 min-h-screen">
         <div className="container mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-8">Get in Touch</h1>
+          <h1 className="text-5xl md:text-7xl font-bold mb-8">{t.title}</h1>
           
           <div className="flex justify-center">
             <div className="max-w-xl w-full">
               <p className="text-xl text-gray-300 mb-20">
-              Have something to feed us? We devour ideas for breakfast.
+                {t.subtitle}
               </p>
               
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-lg font-semibold mb-2 text-yellow-400">Email</h3>
+                  <h3 className="text-lg font-semibold mb-2 text-yellow-400">{t.email}</h3>
                   <p className="text-gray-400">xreatlab@gmail.com</p>
                 </div>
                 
                 <div>
-                  <h3 className="text-lg font-semibold mb-2 text-yellow-400">Location</h3>
+                  <h3 className="text-lg font-semibold mb-2 text-yellow-400">{t.location}</h3>
                   <p className="text-gray-400">Taipei, Taiwan</p>
                 </div>
                 
                 <div>
-                  <h3 className="text-lg font-semibold mb-2 text-yellow-400">Follow Us</h3>
+                  <h3 className="text-lg font-semibold mb-2 text-yellow-400">{t.followUs}</h3>
                   <div className="flex space-x-4 justify-center">
                     <a 
                       href="https://www.instagram.com/dinegital/" 
@@ -76,6 +80,7 @@ const ContactPage = () => {
                   </div>
                 </div>
               </div>
+              <div className="mt-20 text-sm text-gray-700 tracking-widest">Website by Ho-Ieng Tam | ducklexander42@gmail.com</div>
             </div>
           </div>
         </div>
