@@ -40,6 +40,10 @@ const Seo = ({ description = '', lang = 'en', meta = [], title, keywords = '' })
           content: metaKeywords,
         },
         {
+          name: `google-site-verification`,
+          content: `cM-0sqdTxQMHH8VOpKY97GK-6zDc5NII43JTZo37PPo`,
+        },
+        {
           name: `viewport`,
           content: `width=device-width, initial-scale=1`,
         },
