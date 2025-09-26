@@ -80,7 +80,12 @@ const AboutPage = () => {
 
   return (
     <Layout>
-      <Seo title="About" />
+      <Seo 
+        title={t.title} 
+        description={`${t.intro} ${currentLang === 'ZH' ? '我們專精於人工智慧、VR/AR/MR、聲音藝術和3D建模等領域的跨域創作。' : 'We specialize in AI, VR/AR/MR, sound art, and 3D modeling for interdisciplinary projects.'}`}
+        keywords="E.A.T Lab about, team, Taipei National University of Arts, New Media Art, VR AR MR, AI, sound art, 3D modeling, Yen-Chun Lin, Min-Feng Jiang, interdisciplinary art"
+        lang={currentLang === 'ZH' ? 'zh' : 'en'}
+      />
       
       <section className="pt-32 pb-20 min-h-screen">
         <div className="max-w-7xl mx-auto px-6">

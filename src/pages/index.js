@@ -160,7 +160,12 @@ const IndexPage = () => {
 
   return (
     <Layout loadingDuration={indexLoadingDuration}>
-      <Seo title="Home" />
+      <Seo 
+        title="Home" 
+        description={`E.A.T. Lab creates innovative XR dining experiences like Dinegital, mixing internet memes and real food with immersive technology. ${t.subtitle}`}
+        keywords="E.A.T Lab, Dinegital, XR Dining, Virtual Reality Dining, Augmented Reality Restaurant, Mixed Reality, Digital Culture, Immersive Dining, VR Food Experience, Future Restaurant, Interactive Dining, AI Characters"
+        lang={currentLang === 'ZH' ? 'zh' : 'en'}
+      />
       <div className={`transition-opacity duration-700 ${showPage ? 'opacity-100' : 'opacity-0'} bg-black`}>
         {/* Hero Section */}
         <section className="min-h-[600px] flex items-center justify-center bg-black relative overflow-hidden">

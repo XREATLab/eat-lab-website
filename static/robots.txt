@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://xreatlab.pages.dev/sitemap.xml
+
+# Allow important pages for indexing
+Allow: /
+Allow: /work
+Allow: /about
+Allow: /contact
+
+# Common crawl delays
+Crawl-delay: 1

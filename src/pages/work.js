@@ -70,7 +70,12 @@ const WorkPage = () => {
 
   return (
     <Layout>
-      <Seo title="Gallery" />
+      <Seo 
+        title={t.title} 
+        description={`Explore E.A.T. Lab's featured works including The Secret of The World VR experience and Dinegital XR dining experience. ${currentLang === 'ZH' ? '探索我們的精選作品，包括屢獲殊榮的VR作品《世界工廠》和創新的XR用餐體驗Dinegital。' : 'Discover our award-winning projects that blend virtual reality, augmented reality, and digital culture.'}`}
+        keywords="E.A.T Lab works, Dinegital, The Secret of The World, VR projects, XR dining, Virtual Reality Art, Mixed Reality Projects, Digital Art, Interactive Experience"
+        lang={currentLang === 'ZH' ? 'zh' : 'en'}
+      />
       <section className="px-6 py-12 max-w-7xl w-full mx-auto min-h-screen pb-32 flex flex-col justify-center">
         <h2 className="text-4xl font-bold mb-16 text-center md:text-left">{t.title}</h2>
         <div className="relative md:border-l-4 border-yellow-400 md:pl-8">

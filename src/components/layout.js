@@ -3,6 +3,7 @@ import Header from './header'
 import PixelBanner from './pixelbanner'
 import Footer from './footer'
 import Loading from './loading'
+import JsonLd from './json-ld'
 import { useLanguage } from '../contexts/language-context'
 import { useLocation } from '@reach/router'
 
@@ -29,6 +30,7 @@ const Layout = ({ children, loadingDuration = 5000 }) => {
 
   return (
     <LoadingContext.Provider value={isLoading}>
+      <JsonLd />
       <div className="relative min-h-screen bg-black text-white flex flex-col">
         {/* Loading 遮罩 */}
         {isLoading && (

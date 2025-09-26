@@ -27,7 +27,12 @@ const ContactPage = () => {
   
   return (
     <Layout>
-      <Seo title="Contact" />
+      <Seo 
+        title={t.title} 
+        description={`Contact E.A.T. Lab for XR dining experiences, Dinegital projects, and innovative art-technology collaborations. ${t.subtitle}`}
+        keywords="E.A.T Lab contact, XR collaboration, Dinegital inquiry, VR AR projects, art technology partnership, Taiwan, Taipei"
+        lang={currentLang === 'ZH' ? 'zh' : 'en'}
+      />
       
       <section className="pt-32 pb-20 min-h-screen">
         <div className="container mx-auto px-6 text-center">
