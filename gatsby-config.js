@@ -33,9 +33,17 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        output: `/sitemap.xml`,
+        output: `/`,
         excludes: [`/404`],
         createLinkInHead: true,
+        serialize: ({ path, modifiedGmt }) => {
+          return {
+            url: path,
+            lastmod: modifiedGmt,
+            changefreq: 'daily',
+            priority: path === '/' ? 1.0 : 0.8
+          }
+        }
       },
     },
     `gatsby-plugin-postcss`,

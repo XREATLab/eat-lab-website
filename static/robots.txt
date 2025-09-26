@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://xreatlab.pages.dev/sitemap.xml
+Sitemap: https://xreatlab.pages.dev/sitemap-index.xml
 
 # Allow important pages for indexing
 Allow: /
